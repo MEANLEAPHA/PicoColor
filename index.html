@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PicoColor</title>
+    <link rel="icon" href="img/pico2-removebg-preview.png">
+     
+    <meta name="description" content="Powerful tool that helps designers, brands, and creators generate emotion-based color palettes from images or logos. Discover your brand's perfect colors with smart recommendations based on color psychology and harmony. Perfect for branding, UI/UX, marketing, and design inspiration.">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+     
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+      <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
+      <script src="https://kit.fontawesome.com/ec7a51a641.js" crossorigin="anonymous"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+      <!-- font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Tagesschrift&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="asset/css/index.css">
+</head>
+<body>
+     <header >
+          <a href="index.html"><img src="img/picoColor-removebg-preview.png" alt="RentWell-Logo" id="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="fixIssue.html" style='color: rgb(60, 60, 60);font-size: 13px;font-family:  cursive;'>Fix an issue? </a>  <span style="color: rgb(10, 89, 145);"> | </span> </li>
+                    <li><a href="usingTip.html" style='color: rgb(60, 60, 60);font-size: 13px;font-family:  cursive;'>Using Tips </a>  <span style="color: rgb(10, 89, 145);"> | </span> </li>
+                    <li> <a href="colorPsychology.html"  style='color: rgb(60, 60, 60);font-size: 13px;font-family:  cursive;'> Color Pychology </a>  </li>
+                 
+                </ul>
+            </nav>
+        
+      </header>
+
+<main >
+     <!-- <h2>🎨 AI Brand Palette Generator + Logo Preview</h2> -->
+
+  <div class="row" role="region" aria-label="Palette controls">
+    <div id="selectContainer">
+      <div class="sc">
+        <label for="baseColor">Base color:</label>
+        <input type="color" id="baseColor" value="#6a0dad" aria-describedby="baseColorDesc" />
+        <span id="baseColorDesc" class="sr-only">Pick the main base color for your brand palette</span>
+      </div>
+      
+      <div class="sc">
+              <!-- emotions -->
+     <label for="emotion">Brand emotion:</label><br>
+     <select id="emotion" aria-describedby="emotionDesc">
+        <option>Excitement</option>
+        <option>Friendly</option>
+        <option>Optimism</option>
+        <option>Peaceful</option>
+        <option>Trust</option>
+        <option>Creative</option>
+        <option>Hope</option>
+        <option>Reliability</option>
+        <option>Power</option>
+        <option>Balance</option>
+      </select>
+    <span id="emotionDesc" class="sr-only">Choose the emotional tone of your brand</span>
+      </div>
+
+
+    </div>
+
+    <!-- <div id="logoContainer" aria-label="Logo upload and preview">
+    <h3>🖼 Upload Your Logo</h3>
+    <input type="file" id="logoInput" accept="image/*" aria-describedby="logoHelp" />
+    <span id="logoHelp" class="sr-only">Upload a logo image to extract main color</span>
+
+    <div id="logoPreviewWrapper" hidden>
+      <img id="logoPreview" alt="Uploaded logo preview" />
+      <button id="clearLogoBtn" title="Clear uploaded logo" aria-label="Clear uploaded logo">&times;</button>
+    </div>
+  </div>
+
+  <canvas id="canvas" width="800" height="200" style="display:none;"></canvas> -->
+      <div id="logoDropZone">
+      <p id="pUpload">📁 Drag & Drop Logo Here or Click to Upload</p>
+      <input type="file" id="logoInput" accept="image/*" style="display: none;" aria-describedby="logoHelp" />
+
+          <div id="logoPreviewWrapper" hidden>
+      <img id="logoPreview" alt="Uploaded logo preview" />
+      <button id="clearLogoBtn" title="Clear uploaded logo" aria-label="Clear uploaded logo">X</button>
+    </div>
+  </div>
+
+  <canvas id="canvas" width="800" height="200" style="display:none;"></canvas>
+    </div>
+    <span id="logoHelp" class="sr-only">Upload a logo image to extract main color</span>
+
+
+
+  </div>
+  <div style="width: 100%;max-width: 1000px;margin: auto;">
+   <h4>🎨 Best Matching Colors</h4>
+   <p style="font-size: smaller;font-weight: 600;color: rgb(73, 73, 73);">Click on the colors to copy the hex code</p>
+  </div>
+
+  <div id="paletteGrid" aria-live="polite" aria-label="Generated color palette">
+  </div>
+  <br>
+  <div style="width: 100%;max-width: 1000px;margin: auto;">
+   <button id="downloadBtn" aria-label="Download palette with CSS variables">Download Palette <img src="color-selection.png" width="15px" style="margin-bottom: 5px;"></button>
+  </div>
+
+   <br>
+     <div style="width: 100%;max-width: 1000px;margin: auto;">
+   <h4><img src="img/splash.png" width="25px" style="margin-bottom: 4px;"> Color variable</h4>
+  </div>
+  <br>
+
+
+  <div class="tools"  style="width: 100%;max-width: 1000px;margin: auto;position: relative;">
+      <button id="copyAllBtn" style="border: none;background: none;opacity: 0.7;position: absolute;top: 5px;right: 5px;width: 30px;height: 30px;display: flex;justify-content: center;align-items: center;">📋</button>
+    <textarea readonly id="cssOutput" aria-label="CSS variables output">
+    </textarea>
+  </div>
+
+  
+</main>
+
+<script src="asset/js/index2.js"></script>
+</body>
+</html>
