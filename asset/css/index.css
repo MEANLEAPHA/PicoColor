@@ -1,0 +1,367 @@
+header{
+    width: 100%;
+    height: 85px;
+
+    border-bottom: 0.5px #e8e8e8 solid;
+    display: flex;
+   justify-content: space-between;
+   position: relative;
+}
+header #logo{
+    max-width: 100%;
+    height: auto;
+    max-height: 55px;
+    margin:15px 0px 5px 20px;
+    float: left;
+    position:absolute;
+   
+}
+header nav{
+    margin: 20px 10px 5px 20px;
+    display: block;
+    float: right;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-right: 10px;
+    font-weight: 400;
+}
+header nav ul li{
+   padding-left: 4px;
+    padding-top: 8px;
+   
+}
+header nav ul #liLogin{
+  padding-top: 7px;
+  padding-right: 4px;
+  display: flex;
+}
+header nav ul #liLogin #login{
+    
+    height: 27px;
+
+     
+  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+  
+   
+}
+header nav ul #liLogin #login a{
+    color:white;
+}
+header nav ul li a{
+    color: black;
+    text-decoration: none;
+}
+ header  #btnSearch{
+      padding: 5px 13px 5px 13px;
+      border-radius: 15px;
+      border: 0.2px solid lightgray;
+      background-color:rgb(253, 247, 236);
+        
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.333);
+      font-weight: 250;
+      font-size: small;
+      cursor: pointer;
+      height: 30px;
+      margin:17px 30px 0px 0px;
+   
+      
+    }
+.dropdown{
+    display: none;
+    float: right;
+    margin: 10px 10px 5px 0px;
+    position: relative;
+    cursor: pointer;
+
+}
+main{
+    padding: 20px;
+    width: 100%;
+}
+@media (max-width: 768px) {
+
+header{
+  height: 75px;
+}
+ 
+    .dropdown{
+        display: block;
+        font-size: larger;
+        margin: 13px 10px 5px 0px;
+    }
+    .fa-bars-staggered{
+        font-size: larger;
+        color: #00bf63;
+        margin: 10px 5px 5px 0px;
+    }
+    header #logo {
+        margin-top: 18px;
+        max-height: 40px; /* Adjust max height for smaller screens */
+    }
+}
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h2, h3 {
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: #222;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+   
+      margin-bottom: 1.5rem;
+    }
+    label {
+      font-weight: 600;
+      user-select: none;
+    }
+    #selectContainer{
+      display: flex;
+      justify-content: start;
+      width: 100%;
+      gap: 25px;
+      max-width: 1000px;
+      margin: auto;padding: 0;
+    
+    }
+     #selectContainer .sc{
+      width: 40%;
+     }
+    select, input[type="color"], button {
+      font-size: 1rem;
+      height: 2.5rem;
+      padding: 0.45rem 0.7rem;
+      border-radius: 6px;
+      border: 1.5px solid #ccc;
+      width: 100%;
+      transition: border-color 0.3s ease;
+      cursor: pointer;
+    }
+    select:focus, input[type="color"]:focus, button:focus {
+      outline: none;
+      border-color: #6a0dad;
+      box-shadow: 0 0 6px rgba(106, 13, 173, 0.5);
+    }
+    #emotion{
+      width: 100%;
+    }
+ 
+    button {
+      background: #6a0dad;
+      color: white;
+      border: none;
+      font-weight: 600;
+      user-select: none;
+    }
+    button:hover {
+      background: #580cbb;
+    }
+    #downloadBtn{
+      width: 200px;
+      background: #1DBF1D;
+      margin-top: 10px;
+    }
+ #downloadBtn:hover{
+  transform: scale(0.9);
+  background-color: white;
+  
+  box-shadow: 0px 0px 12px 2px #1DBF1D;
+  color: #1DBF1D;
+ }
+    #paletteGrid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 1000px;
+      margin: auto;
+      width: 100%;
+      justify-content: center;
+    }
+    .color-box {
+      flex: 1 1 120px ;
+      max-width: 190px;
+      height: 120px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0.6rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease;
+      user-select: none;
+      color: white;
+     
+      position: relative;
+    }
+    .color-box:hover {
+      transform: scale(1.07);
+      box-shadow: 0 4px 12px  #484848;
+    }
+
+    .color-hex {
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 0.2rem;
+      user-select: text;
+    }
+
+    .tools {
+      max-width: 900px;
+      width: 100%;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    textarea#cssOutput {
+      width: 100%;
+      height: 160px;
+      max-width: 1000px;
+      margin: auto;
+      font-family: 'Consolas', monospace;
+      font-size: 1rem;
+      padding: 15px 0px 20px 20px;
+      border-radius: 8px;
+      border: 1.5px solid #ccc;
+      resize: vertical;
+      color: #333;
+      user-select: all;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+      transition: border-color 0.3s ease;
+    }
+
+    /* Logo upload and preview */
+    #logoContainer {
+      max-width: 1000px;
+      width: 100%;
+      margin-top: 2rem;
+      height: 200px;
+      display: flex;
+      border: 1.5px #f0ae20a1 dashed;
+      border-radius: 10px;
+      margin: auto;
+      flex-direction: column;
+       margin-top: 15px;
+      align-items: center;
+      gap: 1rem;
+    }
+    #logoInput {
+      cursor: pointer;
+    }
+   #logoPreviewWrapper {
+      position: relative;
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      background: white;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      align-items: center;
+    }
+    #logoPreview {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      user-select: none;
+    }
+    #clearLogoBtn {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      background: rgba(255,255,255,0.85);
+      border: none;
+      font-size: 0.9rem;
+      color: #DE2F3E;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border-radius: 50%;
+      cursor: pointer;
+      line-height: 1;
+      user-select: none;
+      box-shadow: 0 0 5px rgba(0,0,0,0.15);
+      transition: background-color 0.2s ease;
+    }
+    #clearLogoBtn:hover {
+      background:  #DE2F3E;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .color-box {
+        max-width: 100%;
+        height: 110px;
+      }
+      #logoPreviewWrapper {
+        width: 80%;
+        height: auto;
+      }
+    }
+
+
+
+
+    #logoDropZone {
+  border: 1.5px dashed rgb(151, 151, 151);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  background: #fff;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  color: rgb(151, 151, 151);
+  max-width: 400px;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  font-weight: 600;
+}
+
+#logoDropZone.dragover {
+  background:  #d7f098e2;
+  border-color: #a3be5fe2;
+  color: #333;
+}
+
+  
